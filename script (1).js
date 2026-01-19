@@ -54,16 +54,3 @@ document.addEventListener('DOMContentLoaded', () => {
                 const randomIndex = Math.floor(Math.random() * texts.length);
                 literaryText.textContent = texts[randomIndex];
                 literaryText.classList.remove('loading');
-            } else {
-                literaryText.textContent = 'لا توجد نصوص أدبية متاحة حالياً. يرجى العودة لاحقاً.';
-                literaryText.classList.remove('loading');
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            literaryText.textContent = 'حدث خطأ أثناء تحميل المحتوى.';
-            literaryText.classList.remove('loading');
-        }
-    }
-
-    fetchData();
-});
